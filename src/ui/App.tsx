@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
   BrowserRouter as Router,
+  match,
   Route,
   Switch,
 } from 'react-router-dom';
@@ -12,6 +13,9 @@ import TeamSelector from './components/TeamSelector';
 
 const { useState } = React;
 
+interface MatchProps {
+  termId: string;
+}
 const App: React.FC<any> = () => {
   const [teams, setTeams] = useState();
 
@@ -37,7 +41,7 @@ const App: React.FC<any> = () => {
           </Route>
           <Route
             path="/team/:teamId"
-            children={({ match }) => (
+            children={({ match }: { match: match<MatchProps> }) => (
               <SelectedTeam match={match} teams={teams} />
             )}
           />

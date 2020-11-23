@@ -4,7 +4,7 @@
     "allowJs": true,
     "module": "commonjs",
     // "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "outDir": "dist",
