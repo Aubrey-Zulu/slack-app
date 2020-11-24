@@ -3,14 +3,18 @@
     "target": "ES2018",
     "allowJs": true,
     "module": "commonjs",
-    // "strict": true /* Enable all strict type-checking options. */,
+    "strict": true /* Enable all strict type-checking options. */,
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "outDir": "dist",
     "declaration": true,
     "jsx": "react",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "stripInternal": true
   },
   "include": ["src"]
 }
